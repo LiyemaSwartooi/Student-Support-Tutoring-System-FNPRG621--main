@@ -17,16 +17,16 @@ The project is organized into the following main components:
 The application includes the following key interfaces:
 
 ### Login Interface
-![Login Screen](images/login.png)
+![Login Screen](https://github.com/LiyemaSwartooi/Student-Support-Tutoring-System-FNPRG621--main/raw/master/images/login.png)
 
 ### Administrator Dashboard
-![Admin Dashboard](images/admin.png)
+![Admin Dashboard](https://github.com/LiyemaSwartooi/Student-Support-Tutoring-System-FNPRG621--main/raw/master/images/admin.png)
 
 ### Student Management Interface
-![Student Management](images/students.png)
+![Student Management](https://github.com/LiyemaSwartooi/Student-Support-Tutoring-System-FNPRG621--main/raw/master/images/students.png)
 
 ### Tutor Dashboard
-![Tutor Dashboard](images/TutorDashboard.png)
+![Tutor Dashboard](https://github.com/LiyemaSwartooi/Student-Support-Tutoring-System-FNPRG621--main/raw/master/images/TutorDashboard.png)
 
 ## Features
 
