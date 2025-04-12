@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="AdminMainForm" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="itutor.booking.system.AdministratorAdminForm">
+   <children>
+      <AnchorPane layoutX="217.0" layoutY="210.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane layoutY="-8.0" prefHeight="608.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-8.0">
+               <left>
+                  <AnchorPane prefHeight="540.0" prefWidth="245.0" styleClass="bg-form1" stylesheets="@Design/MainForm.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="greet_username" layoutX="9.0" layoutY="-46.0" prefHeight="192.0" prefWidth="245.0" styleClass="bg-form6" stylesheets="@Design/MainForm.css" AnchorPane.bottomAnchor="412.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-46.0">
+                           <children>
+                              <Label layoutX="34.0" layoutY="98.0" styleClass="header" stylesheets="@Design/MainForm.css" text="Welcome ,Admin" />
+                              <Line endX="111.0" layoutX="118.0" layoutY="158.0" startX="-103.0" />
+                              <ImageView fitHeight="84.0" fitWidth="77.0" layoutX="82.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/Picture1-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <Button fx:id="Paymentbtn" layoutX="19.0" layoutY="263.0" mnemonicParsing="false" onAction="#switchForms" prefHeight="81.0" prefWidth="212.0" styleClass="btn" stylesheets="@Design/MainForm.css" text="Payments" />
+                        <Button fx:id="dashBoardbtn" layoutX="19.0" layoutY="167.0" mnemonicParsing="false" onAction="#switchForms" prefHeight="81.0" prefWidth="212.0" styleClass="btn" stylesheets="@Design/MainForm.css" text="DASHBOARD" />
+                        <Button fx:id="Notifyingbtn" layoutX="19.0" layoutY="464.0" mnemonicParsing="false" onAction="#switchForms" prefHeight="81.0" prefWidth="212.0" styleClass="btn" stylesheets="@Design/MainForm.css" text="Notifications" />
+                        <FontAwesomeIcon glyphName="ENVELOPE" layoutX="47.0" layoutY="500.0" size="2em" text="" />
+                        <FontAwesomeIcon fill="#008318" glyphName="DOLLAR" layoutX="52.0" layoutY="312.0" size="2EM" />
+                        <FontAwesomeIcon fill="RED" glyphName="DASHBOARD" layoutX="47.0" layoutY="216.0" size="2em" />
+                        <Button fx:id="Salarybtn" layoutX="19.0" layoutY="365.0" mnemonicParsing="false" onAction="#switchForms" prefHeight="81.0" prefWidth="212.0" styleClass="btn" stylesheets="@Design/MainForm.css" text="Budget" />
+                        <FontAwesomeIcon fill="#008624" glyphName="MONEY" layoutX="46.0" layoutY="414.0" size="2em" />
+                     </children>
+                  </AnchorPane>
+               </left>
+               <top>
+                  <AnchorPane prefHeight="50.0" prefWidth="1106.0" stylesheets="@Design/MainForm.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <StackPane layoutX="246.0" layoutY="5.0" prefHeight="45.0" prefWidth="872.0" styleClass="bg-form6" stylesheets="@Design/MainForm.css">
+                           <children>
+                              <Label text="DASH BOARED FORM">
+                                 <font>
+                                    <Font name="AdobeHebrew-Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                     </children></AnchorPane>
+               </top>
+               <center>
+                  <StackPane prefHeight="499.0" prefWidth="868.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="AdministratorForm_Payments" layoutX="10.0" layoutY="10.0" prefHeight="558.0" prefWidth="886.0">
+                           <children>
+                              <AnchorPane layoutX="3.0" layoutY="5.0" prefHeight="549.0" prefWidth="870.0" styleClass="bg-form1" stylesheets="@Design/MainForm.css">
+                                 <children>
+                                    <Label layoutX="675.0" layoutY="23.0" text="Status :" />
+                                    <ComboBox fx:id="EmpStatus" layoutX="714.0" layoutY="19.0" prefWidth="150.0" styleClass="btn" stylesheets="@Design/MainForm.css" />
+                                    <DatePicker fx:id="EmpYearOfEmployment" layoutX="153.0" layoutY="76.0" prefHeight="33.0" prefWidth="213.0" />
+                                    <Label layoutX="58.0" layoutY="26.0" text="Tutor Username :" />
+                                    <Label layoutX="39.0" layoutY="85.0" text="Year of Employment :" />
+                                    <TextField fx:id="EmpStudentNumber" layoutX="153.0" layoutY="18.0" prefHeight="33.0" prefWidth="213.0" />
+                                    <TextField fx:id="EmpFullName" layoutX="454.0" layoutY="18.0" prefHeight="33.0" prefWidth="213.0" />
+                                    <Label layoutX="391.0" layoutY="26.0" text="Full Name :" />
+                                    <Label layoutX="393.0" layoutY="85.0" text="Payment  :" />
+                                    <TextField fx:id="EmpPaymentSection" layoutX="454.0" layoutY="77.0" prefHeight="33.0" prefWidth="213.0" />
+                                    <TableView fx:id="EmpData" layoutY="140.0" prefHeight="337.0" prefWidth="871.0" styleClass="main-bg" stylesheets="@Design/MainForm.css">
+                                       <columns>
+                                          <TableColumn fx:id="EmpcolId" prefWidth="73.0" text="ID" />
+                                          <TableColumn fx:id="EmpcolTutorUsername" prefWidth="180.0" text="Tutor Username" />
+                                          <TableColumn fx:id="EmpcolFullName" prefWidth="158.0" text="Full Name" />
+                                          <TableColumn fx:id="EmpcolYearOfEmployment" prefWidth="181.0" text="Year of Employment" />
+                                          <TableColumn fx:id="EmpcolPayment" prefWidth="125.0" text="Payment  " />
+                                          <TableColumn fx:id="EmpcolStatuspayment" prefWidth="169.0" text="Status Payment  " />
+                                       </columns>
+                                    </TableView>
+                                    <Button fx:id="paymentBtn" layoutX="72.0" layoutY="488.0" mnemonicParsing="false" onAction="#handleSalaryBtn" prefHeight="47.0" prefWidth="142.0" styleClass="btn" stylesheets="@Design/MainForm.css" text="PAY" />
+                                    <Button fx:id="EmpUpdateDatabtn" layoutX="267.0" layoutY="488.0" mnemonicParsing="false" onAction="#handleEmpUpdateData" prefHeight="47.0" prefWidth="145.0" styleClass="btn" stylesheets="@Design/MainForm.css" text="Update Data" />
+                                    <Button fx:id="ViewClaimsbtn" layoutX="468.0" layoutY="488.0" mnemonicParsing="false" onAction="#viewClaims" prefHeight="47.0" prefWidth="145.0" styleClass="btn" stylesheets="@Design/MainForm.css" text="View Claims" />
+                                    <AnchorPane fx:id="DisplayClaim" layoutX="4.0" layoutY="2.0" onDragDetected="#viewClaims" prefHeight="200.0" prefWidth="864.0" styleClass="bg-form1" stylesheets="@Design/MainForm.css">
+                                       <children>
+                                          <TableView fx:id="ClaimFormTableView" layoutX="-1.0" layoutY="-2.0" onSort="#viewClaims" prefHeight="238.0" prefWidth="869.0">
+                                            <columns>
+                                              <TableColumn fx:id="idClaim" prefWidth="75.0" text="id" />
+                                              <TableColumn fx:id="usernameClaim" prefWidth="145.0" text="Username" />
+                                                <TableColumn fx:id="fromtimeClaim" prefWidth="67.0" text="From time" />
+                                                <TableColumn fx:id="toTimeClaim" prefWidth="84.0" text="To time" />
+                                                <TableColumn fx:id="RateperunitClaim" prefWidth="108.0" text="Rate per unit" />
+                                                <TableColumn fx:id="totalhoursworkedforthemonth" prefWidth="240.0" text="Total hours worked for the month" />
+                                                <TableColumn fx:id="valueofclaim" prefWidth="149.0" text="Value of claim" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                    <Button fx:id="CloseClaimTable" layoutX="667.0" layoutY="488.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="145.0" styleClass="btn" stylesheets="@Design/MainForm.css" text="Close" />
+                                 </children></AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="AdministratorForm_Salaries" prefHeight="558.0" prefWidth="889.0" visible="false">
+                           <children>
+                              <AnchorPane layoutX="3.0" layoutY="5.0" prefHeight="550.0" prefWidth="871.0" styleClass="bg-form1" stylesheets="@Design/MainForm.css">
+                                 <children>
+                                    <Button fx:id="ADDbtn" layoutX="181.0" layoutY="437.0" mnemonicParsing="false" onAction="#handleAddButtonClick" prefHeight="47.0" prefWidth="142.0" styleClass="btn" stylesheets="@Design/MainForm.css" text="ADD" />
+                                    <Button fx:id="Clearbtn" layoutX="546.0" layoutY="437.0" mnemonicParsing="false" onAction="#handleClearButtonClick" prefHeight="47.0" prefWidth="145.0" styleClass="btn" stylesheets="@Design/MainForm.css" text="Clear" />
+                                    <TextField fx:id="BudgetedAmount" layoutX="283.0" layoutY="244.0" prefHeight="62.0" prefWidth="343.0" promptText="Rand Amount" styleClass="btn" stylesheets="@Design/MainForm.css" />
+                                    <Label layoutY="108.0" prefHeight="39.0" prefWidth="353.0" text="Please Enter Budgeted Amount :">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <FontAwesomeIcon fill="#078d00" glyphName="MONEY" layoutX="384.0" layoutY="82.0" size="8em" />
+                                    <Label layoutX="246.0" layoutY="240.0" text="R">
+                                       <font>
+                                          <Font size="48.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="AdministratorForm_Notifying" prefHeight="558.0" prefWidth="886.0" visible="false">
+                           <children>
+                              <AnchorPane layoutX="3.0" layoutY="5.0" prefHeight="549.0" prefWidth="862.0" styleClass="bg-form1" stylesheets="@Design/MainForm.css">
+                                 <children>
+                                    <TableView fx:id="Administrator_tableView" layoutY="-1.0" prefHeight="447.0" prefWidth="871.0">
+                                      <columns>
+                                        <TableColumn fx:id="Administrator_id" prefWidth="75.0" text="ID" />
+                                        <TableColumn fx:id="Administrator_StudentName" prefWidth="116.0" text="Student Username" />
+                                          <TableColumn fx:id="Administrator_ModuleName" prefWidth="152.0" text="Module Name" />
+                                          <TableColumn fx:id="Administrator_ModuleTime" prefWidth="85.0" text="Module Time" />
+                                          <TableColumn fx:id="Administrator_MeetingDate" prefWidth="106.0" text="Meeting Date" />
+                                          <TableColumn fx:id="Administrator_SpecialComments" prefWidth="160.0" text="Special   Comments" />
+                                          <TableColumn fx:id="Administrator_Location" prefWidth="89.0" text="Location" />
+                                          <TableColumn fx:id="Administrator_Status" prefWidth="87.0" text="Status" />
+                                      </columns>
+                                    </TableView>
+                                    <Button fx:id="ViewDataRejection" layoutX="325.0" layoutY="463.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="214.0" styleClass="btn" stylesheets="@Design/MainForm.css" text="View Data" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="AdministratorForm_Dashboard" layoutX="10.0" layoutY="10.0" prefHeight="558.0" prefWidth="854.0" visible="false">
+                           <children>
+                              <AnchorPane layoutX="3.0" layoutY="5.0" prefHeight="549.0" prefWidth="870.0" styleClass="bg-form1" stylesheets="@Design/MainForm.css">
+                                 <children>
+                                    <ScrollPane layoutX="-1.0" prefHeight="206.0" prefWidth="871.0">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="204.0" prefWidth="950.0" styleClass="bg-form1" stylesheets="@Design/MainForm.css">
+                                             <children>
+                                                <Button layoutX="10.0" layoutY="3.0" mnemonicParsing="false" prefHeight="178.0" prefWidth="291.0" styleClass="btn" stylesheets="@Design/MainForm.css" text="Total Number Sudent`s" />
+                                                <FontAwesomeIcon glyphName="USERS" layoutX="123.0" layoutY="65.0" size="5em" />
+                                                <Label fx:id="TotalNumberSudents" layoutX="145.0" layoutY="112.0" text="0">
+                                                   <font>
+                                                      <Font name="System Bold" size="36.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button layoutX="337.0" layoutY="3.0" mnemonicParsing="false" prefHeight="178.0" prefWidth="291.0" styleClass="btn" stylesheets="@Design/MainForm.css" text="Total Number Tutor`s" />
+                                                <FontAwesomeIcon glyphName="USERS" layoutX="450.0" layoutY="65.0" size="5em" />
+                                                <Label fx:id="TotalNumberTutors" layoutX="472.0" layoutY="112.0" text="0">
+                                                   <font>
+                                                      <Font name="System Bold" size="36.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button layoutX="651.0" layoutY="3.0" mnemonicParsing="false" prefHeight="178.0" prefWidth="291.0" styleClass="btn" stylesheets="@Design/MainForm.css" text="Budgeted Amount" />
+                                                <FontAwesomeIcon fill="#00ae5d" glyphName="MONEY" layoutX="764.0" layoutY="65.0" size="5em" />
+                                                <Label fx:id="UpdatedAmount" layoutX="688.0" layoutY="112.0" text="0">
+                                                   <font>
+                                                      <Font name="System Bold" size="36.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </ScrollPane>
+                                    <StackPane layoutX="1.0" layoutY="206.0" prefHeight="341.0" prefWidth="441.0" styleClass="bg-form1" stylesheets="@Design/MainForm.css">
+                                       <children>
+                                          <AreaChart fx:id="DataofStudents" title="Data of Students">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </AreaChart>
+                                       </children></StackPane>
+                                    <StackPane layoutX="447.0" layoutY="206.0" prefHeight="175.0" prefWidth="423.0" styleClass="bg-form1" stylesheets="@Design/MainForm.css">
+                                       <children>
+                                          <AreaChart fx:id="DataofTutor" title="Data of Tutor">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </AreaChart>
+                                       </children></StackPane>
+                                    <StackPane layoutX="447.0" layoutY="386.0" prefHeight="161.0" prefWidth="423.0" styleClass="bg-form1" stylesheets="@Design/MainForm.css">
+                                       <children>
+                                          <AreaChart fx:id="BudgetOverview" title="Budget Overview">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </AreaChart>
+                                       </children></StackPane>
+                                 </children></AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </StackPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

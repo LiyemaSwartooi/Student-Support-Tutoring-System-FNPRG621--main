@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="StudentMainForm" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="itutor.booking.system.StudentAdminFormController">
+   <children>
+      <AnchorPane layoutX="217.0" layoutY="210.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane layoutY="-8.0" prefHeight="608.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-8.0">
+               <left>
+                  <AnchorPane prefHeight="540.0" prefWidth="245.0" styleClass="bg-form1" stylesheets="@Design/MainForm.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="greet_username" layoutX="9.0" layoutY="-46.0" prefHeight="192.0" prefWidth="245.0" styleClass="bg-form6" stylesheets="@Design/MainForm.css" AnchorPane.bottomAnchor="412.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-46.0">
+                           <children>
+                              <Label layoutX="34.0" layoutY="98.0" styleClass="header" stylesheets="@Design/MainForm.css" text="Welcome ,Student" />
+                              <Line endX="111.0" layoutX="118.0" layoutY="158.0" startX="-103.0" />
+                              <ImageView fitHeight="84.0" fitWidth="77.0" layoutX="82.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/Picture1-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <Button fx:id="Student_BookaTutorial" layoutX="19.0" layoutY="371.0" mnemonicParsing="false" onAction="#StudentSwitchForms" prefHeight="81.0" prefWidth="212.0" styleClass="btn" stylesheets="@Design/MainForm.css" text="Book a Tutorial" />
+                        <FontAwesomeIcon fill="#373540" glyphName="PLUS_CIRCLE" layoutX="42.0" layoutY="420.0" size="2em" />
+                        <Button fx:id="Student_Selfstudylessons" layoutX="19.0" layoutY="177.0" mnemonicParsing="false" onAction="#StudentSwitchForms" prefHeight="81.0" prefWidth="212.0" styleClass="btn" stylesheets="@Design/MainForm.css" text="Self-study lessons" />
+                        <Button fx:id="Student_Attemptatest" layoutX="19.0" layoutY="279.0" mnemonicParsing="false" onAction="#StudentSwitchForms" prefHeight="81.0" prefWidth="212.0" styleClass="btn" stylesheets="@Design/MainForm.css" text="Attempt a test" />
+                        <FontAwesomeIcon fill="#008d46" glyphName="BOOK" layoutX="41.0" layoutY="227.0" size="2em" text="" />
+                        <FontAwesomeIcon fill="#9a9a9a" glyphName="USER" layoutX="43.0" layoutY="329.0" size="2em" text="" />
+                        <Button fx:id="Student_Notfiying" layoutX="19.0" layoutY="462.0" mnemonicParsing="false" onAction="#StudentSwitchForms" prefHeight="81.0" prefWidth="212.0" styleClass="btn" stylesheets="@Design/MainForm.css" text="Notifications" />
+                        <FontAwesomeIcon glyphName="ENVELOPE" layoutX="40.0" layoutY="511.0" size="2em" />
+                     </children>
+                  </AnchorPane>
+               </left>
+               <top>
+                  <AnchorPane prefHeight="42.0" prefWidth="1100.0" stylesheets="@Design/MainForm.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <StackPane layoutX="246.0" layoutY="5.0" prefHeight="45.0" prefWidth="867.0" styleClass="bg-form6" stylesheets="@Design/MainForm.css">
+                           <children>
+                              <Label text="DASH BOARED FORM">
+                                 <font>
+                                    <Font name="AdobeHebrew-Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                     </children></AnchorPane>
+               </top>
+               <right>
+                  <StackPane prefHeight="558.0" prefWidth="857.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="Student_DashBoared" prefHeight="558.0" prefWidth="886.0">
+                           <children>
+                              <BorderPane layoutX="1.0" layoutY="5.0" prefHeight="189.0" prefWidth="855.0" />
+                              <ScrollPane layoutX="1.0" layoutY="5.0" prefHeight="553.0" prefWidth="865.0">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="439.0" prefWidth="1388.0">
+                                       <children>
+                                          <AnchorPane layoutX="14.0" layoutY="48.0" prefHeight="439.0" prefWidth="254.0" styleClass="btn" stylesheets="@Design/MainForm.css">
+                                             <children>
+                                                <Label layoutX="16.0" layoutY="261.0" text="Study With :">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="166.0" fitWidth="200.0" layoutX="28.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@images/Screenshot%202024-04-15%20194046.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Hyperlink fx:id="Student_hyperlink1" layoutX="74.0" layoutY="338.0" text="GO &gt;">
+                                                   <font>
+                                                      <Font size="36.0" />
+                                                   </font>
+                                                </Hyperlink>
+                                                <FontAwesomeIcon glyphName="USERS" layoutX="80.0" layoutY="106.0" size="5em" />
+                                                <Label layoutX="90.0" layoutY="287.0" text="freeCodeCamp.org">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="566.0" layoutY="48.0" prefHeight="439.0" prefWidth="254.0" styleClass="btn" stylesheets="@Design/MainForm.css">
+                                             <children>
+                                                <FontAwesomeIcon glyphName="USERS" layoutX="90.0" layoutY="107.0" size="5em" />
+                                                <ImageView fitHeight="60.0" fitWidth="200.0" layoutX="29.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@images/Screenshot%202024-04-15%20203940.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Hyperlink fx:id="Student_hyperlink3" layoutX="76.0" layoutY="338.0" text="GO &gt;">
+                                                   <font>
+                                                      <Font size="36.0" />
+                                                   </font>
+                                                </Hyperlink>
+                                                <Label layoutX="16.0" layoutY="255.0" text="Study With :">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="31.0" layoutY="281.0" text="Programming with Mosh">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="2000.0" layoutY="7.0" prefHeight="439.0" prefWidth="254.0" styleClass="btn" stylesheets="@Design/MainForm.css" />
+                                          <AnchorPane layoutX="292.0" layoutY="48.0" prefHeight="439.0" prefWidth="254.0" styleClass="btn" stylesheets="@Design/MainForm.css">
+                                             <children>
+                                                <FontAwesomeIcon glyphName="USERS" layoutX="90.0" layoutY="106.0" size="5em" />
+                                                <ImageView fitHeight="74.0" fitWidth="166.0" layoutX="91.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@images/WhatsApp%20Image%202024-05-22%20at%2011.24.16_d68d75a0.jpg" />
+                                                   </image>
+                                                </ImageView>
+                                                <Hyperlink fx:id="Student_hyperlink2" layoutX="74.0" layoutY="338.0" text="GO &gt;">
+                                                   <font>
+                                                      <Font size="36.0" />
+                                                   </font>
+                                                </Hyperlink>
+                                                <Label layoutX="16.0" layoutY="251.0" text="Study With :">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="109.0" layoutY="285.0" text="Bro Code">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="850.0" layoutY="48.0" prefHeight="439.0" prefWidth="254.0" styleClass="btn" stylesheets="@Design/MainForm.css">
+                                             <children>
+                                                <FontAwesomeIcon glyphName="USERS" layoutX="90.0" layoutY="107.0" size="5em" />
+                                                <ImageView fitHeight="166.0" fitWidth="200.0" layoutX="29.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@images/Screenshot%202024-04-15%20204234.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Hyperlink fx:id="Student_hyperlink4" layoutX="76.0" layoutY="338.0" text="GO &gt;">
+                                                   <font>
+                                                      <Font size="36.0" />
+                                                   </font>
+                                                </Hyperlink>
+                                                <Label layoutX="16.0" layoutY="255.0" text="Study With :">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="90.0" layoutY="281.0" text="Codecademy ">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="1130.0" layoutY="48.0" prefHeight="439.0" prefWidth="254.0" styleClass="btn" stylesheets="@Design/MainForm.css">
+                                             <children>
+                                                <FontAwesomeIcon glyphName="USERS" layoutX="90.0" layoutY="107.0" size="5em" />
+                                                <ImageView fitHeight="166.0" fitWidth="200.0" layoutX="29.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@images/Screenshot%202024-04-15%20204556.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Hyperlink fx:id="Student_hyperlink5" layoutX="76.0" layoutY="338.0" text="GO &gt;">
+                                                   <font>
+                                                      <Font size="36.0" />
+                                                   </font>
+                                                </Hyperlink>
+                                                <Label layoutX="16.0" layoutY="255.0" text="Study With :">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="60.0" layoutY="281.0" text="Programming Tutorials">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="Student_AttemptatestDashBoared" layoutX="10.0" layoutY="10.0" prefHeight="558.0" prefWidth="886.0" visible="false">
+                           <children>
+                              <BorderPane layoutX="1.0" layoutY="5.0" prefHeight="189.0" prefWidth="855.0" />
+                              <ScrollPane layoutX="1.0" layoutY="5.0" prefHeight="553.0" prefWidth="865.0">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="439.0" prefWidth="1388.0">
+                                       <children>
+                                          <AnchorPane layoutX="14.0" layoutY="48.0" prefHeight="439.0" prefWidth="254.0" styleClass="btn" stylesheets="@Design/MainForm.css">
+                                             <children>
+                                                <Label layoutX="16.0" layoutY="261.0" text="Attempt a test on :">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="166.0" fitWidth="200.0" layoutX="27.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@images/Screenshot%202024-04-15%20211022.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Hyperlink fx:id="Student_hyperlink6" layoutX="57.0" layoutY="339.0" text="Attempt a test &gt;">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Hyperlink>
+                                                <FontAwesomeIcon glyphName="USERS" layoutX="80.0" layoutY="106.0" size="5em" />
+                                                <Label layoutX="126.0" layoutY="287.0" text="Quizlet">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="566.0" layoutY="48.0" prefHeight="439.0" prefWidth="254.0" styleClass="btn" stylesheets="@Design/MainForm.css">
+                                             <children>
+                                                <FontAwesomeIcon glyphName="USERS" layoutX="90.0" layoutY="107.0" size="5em" />
+                                                <ImageView fitHeight="80.0" fitWidth="201.0" layoutX="29.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@images/Screenshot%202024-04-15%20212701.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Hyperlink fx:id="Student_hyperlink8" layoutX="59.0" layoutY="333.0" text="Attempt a test &gt;">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Hyperlink>
+                                                <Label layoutX="16.0" layoutY="255.0" text="Attempt a test on :">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="101.0" layoutY="281.0" text="Codecademy">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="2000.0" layoutY="7.0" prefHeight="439.0" prefWidth="254.0" styleClass="btn" stylesheets="@Design/MainForm.css" />
+                                          <AnchorPane layoutX="292.0" layoutY="48.0" prefHeight="439.0" prefWidth="254.0" styleClass="btn" stylesheets="@Design/MainForm.css">
+                                             <children>
+                                                <FontAwesomeIcon glyphName="USERS" layoutX="90.0" layoutY="106.0" size="5em" />
+                                                <ImageView fitHeight="89.0" fitWidth="154.0" layoutX="81.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@images/Screenshot%202024-04-15%20212439.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Hyperlink fx:id="Student_hyperlink7" layoutX="56.0" layoutY="337.0" text="Attempt a test &gt;">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Hyperlink>
+                                                <Label layoutX="16.0" layoutY="251.0" text="Attempt a test on :">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="109.0" layoutY="285.0" text="Course Hero">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="850.0" layoutY="48.0" prefHeight="439.0" prefWidth="254.0" styleClass="btn" stylesheets="@Design/MainForm.css">
+                                             <children>
+                                                <FontAwesomeIcon glyphName="USERS" layoutX="90.0" layoutY="107.0" size="5em" />
+                                                <ImageView fitHeight="89.0" fitWidth="154.0" layoutX="80.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@images/Screenshot%202024-04-15%20213204.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Hyperlink fx:id="Student_hyperlink9" layoutX="59.0" layoutY="333.0" text="Attempt a test &gt;">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Hyperlink>
+                                                <Label layoutX="16.0" layoutY="255.0" text="Attempt a test on :">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="90.0" layoutY="281.0" text="Khan Academy">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="1130.0" layoutY="48.0" prefHeight="439.0" prefWidth="254.0" styleClass="btn" stylesheets="@Design/MainForm.css">
+                                             <children>
+                                                <FontAwesomeIcon glyphName="USERS" layoutX="90.0" layoutY="107.0" size="5em" />
+                                                <ImageView fitHeight="166.0" fitWidth="200.0" layoutX="29.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@images/Screenshot%202024-04-15%20213739.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Hyperlink fx:id="Student_hyperlink10" layoutX="59.0" layoutY="333.0" text="Attempt a test &gt;">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Hyperlink>
+                                                <Label layoutX="16.0" layoutY="255.0" text="Attempt a test on :">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="60.0" layoutY="281.0" text="Kahoot!">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="Student_BookaTutorialForm" layoutX="10.0" layoutY="10.0" prefHeight="558.0" prefWidth="886.0" visible="false">
+                           <children>
+                              <AnchorPane layoutX="3.0" layoutY="5.0" prefHeight="549.0" prefWidth="862.0" styleClass="bg-form1" stylesheets="@Design/MainForm.css">
+                                 <children>
+                                    <ComboBox fx:id="Module_Time" layoutX="582.0" layoutY="161.0" onAction="#ModuleLists" prefHeight="32.0" prefWidth="205.0" styleClass="btn" stylesheets="@Design/MainForm.css" />
+                                    <Label layoutX="461.0" layoutY="163.0" text="Module Time :">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="Module_Name" layoutX="199.0" layoutY="227.0" onAction="#NameLists" prefHeight="32.0" prefWidth="205.0" styleClass="btn" stylesheets="@Design/MainForm.css" />
+                                    <Label layoutX="440.0" layoutY="272.0" text="Special comments :">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="65.0" layoutY="230.0" text="Module Name :">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextArea fx:id="Special_Comments" layoutX="594.0" layoutY="272.0" prefHeight="178.0" prefWidth="245.0" />
+                                    <FontAwesomeIcon glyphName="USERS" layoutX="392.0" layoutY="76.0" size="6em" />
+                                    <Label layoutY="69.0" prefHeight="72.0" prefWidth="503.0" text="Please enter your Module name, date, time :">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="Module_Date" layoutX="203.0" layoutY="371.0" styleClass="btn" stylesheets="@Design/MainForm.css" />
+                                    <Label layoutX="78.0" layoutY="374.0" text="Module Date :">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="Module_Username" layoutX="199.0" layoutY="162.0" prefHeight="32.0" prefWidth="205.0" styleClass="btn" stylesheets="@Design/MainForm.css" />
+                                    <Label layoutX="37.0" layoutY="164.0" text="Student Username:">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <ProgressBar fx:id="progressBar" layoutX="174.0" layoutY="377.0" prefHeight="87.0" prefWidth="590.0" progress="0.0" styleClass="nav-btn" stylesheets="@Design/MainForm.css" visible="false" />
+                                    <ComboBox fx:id="DesiredLocation" layoutX="198.0" layoutY="299.0" onAction="#Location" prefHeight="32.0" prefWidth="209.0" styleClass="btn" stylesheets="@Design/MainForm.css" />
+                                    <Label layoutX="113.0" layoutY="302.0" text="Location :">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="Student_BookaTutorialbtn" layoutX="324.0" layoutY="457.0" mnemonicParsing="false" onAction="#bookTutorial" prefHeight="59.0" prefWidth="214.0" styleClass="btn" stylesheets="@Design/MainForm.css" text="Book Tutorial" />
+                                 </children></AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="Student_NotifyingForm" layoutX="10.0" layoutY="10.0" prefHeight="558.0" prefWidth="886.0" visible="false">
+                           <children>
+                              <AnchorPane layoutX="3.0" layoutY="5.0" prefHeight="549.0" prefWidth="862.0" styleClass="bg-form1" stylesheets="@Design/MainForm.css">
+                                 <children>
+                                    <Button fx:id="ViewDetails" layoutX="352.0" layoutY="470.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="173.0" styleClass="btn" stylesheets="@Design/MainForm.css" text="View Details " />
+                                 </children>
+                              </AnchorPane>
+                              <TableView fx:id="Student_tableView" layoutX="3.0" layoutY="5.0" prefHeight="440.0" prefWidth="864.0" stylesheets="@Design/MainForm.css">
+                                 <columns>
+                                    <TableColumn fx:id="Student_id" prefWidth="75.0" text="ID" />
+                                    <TableColumn fx:id="Student_Username" prefWidth="134.0" text="Student Username" />
+                                    <TableColumn fx:id="StudentModule_Name" prefWidth="134.0" text="Module Name" />
+                                    <TableColumn fx:id="StudentModule_Time" prefWidth="103.0" text="Module Time" />
+                                    <TableColumn fx:id="StudentMeeting_Date" prefWidth="88.0" text="Meeting Date" />
+                                    <TableColumn fx:id="Student_SpecialComments" prefWidth="168.0" text="Special   Comments" />
+                                    <TableColumn fx:id="Student_Location" prefWidth="78.0" text="Location" />
+                                    <TableColumn fx:id="Student_Status" prefWidth="90.0" text="Status" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </StackPane>
+               </right>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

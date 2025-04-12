@@ -1,0 +1,84 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 02 Apr 2024, 21:11:56
+    Author     : Admin
+*/
+
+
+/* CSS styles */
+* {
+    -fx-font-family: "Poppins", sans-serif;
+    -fx-font-weight: 100; /* Thin */
+    -fx-font-style: normal;
+}
+
+.poppins-extralight {
+    -fx-font-family: "Poppins", sans-serif;
+    -fx-font-weight: 200; /* Extra-light */
+    -fx-font-style: normal;
+}
+
+.bg-form {
+    -fx-background-color: linear-gradient(to bottom right, #f8f8f8, #f8f8f8);
+}
+
+.bg-form2 {
+    -fx-background-color: linear-gradient(to bottom right, #38bfff, #38bfff);
+    -fx-background-radius: 10px; /* Adjust the value as needed */
+    -fx-background-insets: 0, 5; /* Adjust the value to control the shadow intensity */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 255, 0.3), 10, 0, 0, 5); /* Adjust the values as needed */
+}
+
+.bg-form3 {
+    -fx-background-color: linear-gradient(to bottom right, #ffffff, #ffffff);
+    -fx-background-radius: 10px; /* Adjust the value as needed */
+    -fx-background-insets: 0, 5; /* Adjust the value to control the shadow intensity */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 255, 0.3), 10, 0, 0, 5); /* Adjust the values as needed */
+}
+
+.header {
+    -fx-border-color: linear-gradient(to bottom right, #38bfff, #38bfff);
+    -fx-border-width: 0 0 0 3px;
+    -fx-padding: 0 0 0 5px;
+    -fx-font-size: 20px;
+    
+}
+
+/* CSS styles for .textfield */
+.textfield {
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 0 25px;
+    -fx-border-color: linear-gradient(to bottom right, #38bfff, #38bfff);
+    -fx-border-width: .8px;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5); /* Add strong shadow effect */
+    -fx-border-radius: 5px; /* Add border radius */
+}
+
+
+.textfield:focused {
+    -fx-background-color: #fff;
+    -fx-text-fill: #000;
+}
+
+/* CSS styles for .btn */
+.btn {
+    -fx-background-color: linear-gradient(to bottom right, #38bfff, #38bfff);
+    -fx-font-family: Arial;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-background-radius: 5px; /* Adjust the border radius as needed */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5); /* Add strong shadow effect */
+}
+
+.btn .text {
+    -fx-font-weight: bold; /* Make the text bold */
+}
+
+.btn:hover {
+    -fx-background-color: #fff; /* Replace #fff with the desired color code */
+}

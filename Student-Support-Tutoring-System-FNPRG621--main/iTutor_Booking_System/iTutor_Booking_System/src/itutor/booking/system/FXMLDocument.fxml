@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="itutor.booking.system.FXMLDocumentController">
+   <children>
+      <AnchorPane fx:id="login_form" prefHeight="200.0" prefWidth="200.0" styleClass="bg-form" stylesheets="@Design/LoginForm.css">
+         <children>
+            <Label layoutX="59.0" layoutY="121.0" styleClass="header" stylesheets="@Design/LoginForm.css" text="Welcome Back !">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="login_username" layoutX="60.0" layoutY="186.0" prefHeight="40.0" prefWidth="250.0" promptText="Username" styleClass="textfield" stylesheets="@Design/LoginForm.css" />
+            <PasswordField fx:id="login_password" layoutX="60.0" layoutY="262.0" prefHeight="40.0" prefWidth="250.0" promptText="Password" styleClass="textfield" stylesheets="@Design/LoginForm.css" />
+            <Button fx:id="login_signUp" layoutX="59.0" layoutY="347.0" mnemonicParsing="false" onAction="#loginAccount" prefHeight="40.0" prefWidth="121.0" styleClass="btn" stylesheets="@Design/LoginForm.css" text="LOGIN" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+            <FontAwesomeIcon glyphName="USER" layoutX="68.0" layoutY="212.0" size="1.5em" />
+            <FontAwesomeIcon glyphName="LOCK" layoutX="70.0" layoutY="288.0" size="1.5em" />
+            <Label layoutX="59.0" layoutY="444.0" text="Don`t Have An Account ? :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="90.0" fitWidth="106.0" layoutX="140.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Picture1-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ComboBox fx:id="login_role" layoutX="214.0" layoutY="440.0" onAction="#switchForm" prefHeight="25.0" prefWidth="105.0" promptText="Choose Role" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="tutor_form" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" styleClass="bg-form" stylesheets="@Design/LoginForm.css" visible="false">
+         <children>
+            <Label layoutX="65.0" layoutY="96.0" styleClass="header" stylesheets="@Design/LoginForm.css" text="Register Account">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="tutor_password" layoutX="60.0" layoutY="304.0" onAction="#registerTutor" prefHeight="40.0" prefWidth="250.0" promptText="Password" styleClass="textfield" stylesheets="@Design/LoginForm.css" />
+            <Button fx:id="tutor_signUp" layoutX="62.0" layoutY="412.0" mnemonicParsing="false" onAction="#registerTutor" prefHeight="40.0" prefWidth="127.0" styleClass="btn" stylesheets="@Design/LoginForm.css" text="SIGN UP" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <FontAwesomeIcon glyphName="LOCK" layoutX="70.0" layoutY="331.0" size="1.5em" />
+            <Label layoutX="64.0" layoutY="465.0" text="Already Have An Account ? :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="tutor_signinhere" layoutX="224.0" layoutY="461.0" onAction="#signInForm" text="Sign in Here">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Hyperlink>
+            <ImageView fitHeight="90.0" fitWidth="106.0" layoutX="145.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Picture1-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="68.0" layoutY="126.0" text="Tutor">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="tutor_confirmPassword" layoutX="60.0" layoutY="364.0" onAction="#registerTutor" prefHeight="40.0" prefWidth="250.0" promptText="Confirm Password" styleClass="textfield" stylesheets="@Design/LoginForm.css" />
+            <FontAwesomeIcon glyphName="LOCK" layoutX="70.0" layoutY="390.0" size="1.5em" text="" />
+            <TextField fx:id="tutor_username" layoutX="60.0" layoutY="151.0" onAction="#registerTutor" prefHeight="35.0" prefWidth="250.0" promptText="Username" styleClass="textfield" stylesheets="@Design/LoginForm.css" />
+            <FontAwesomeIcon glyphName="USER" layoutX="69.0" layoutY="174.0" size="1.5em" />
+            <TextField fx:id="tutor_id" layoutX="89.0" layoutY="209.0" onAction="#registerTutor" prefHeight="40.0" prefWidth="250.0" promptText="Auto Generated" styleClass="bg-form" stylesheets="@Design/MainForm.css">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></TextField>
+            <Label layoutX="68.0" layoutY="193.0" text="Tutor ID :" textFill="RED">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <FontAwesomeIcon fill="RED" glyphName="STAR" layoutX="73.0" layoutY="236.0" size="1.5em" text="" />
+            <TextField fx:id="tutor_phoneNumber" layoutX="60.0" layoutY="249.0" onAction="#registerTutor" prefHeight="40.0" prefWidth="250.0" promptText="Phone Number" styleClass="textfield" stylesheets="@Design/LoginForm.css" />
+            <FontAwesomeIcon glyphName="PHONE" layoutX="68.0" layoutY="275.0" size="1.5em" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Administrator_form" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" styleClass="bg-form" stylesheets="@Design/LoginForm.css" visible="false">
+         <children>
+            <Label layoutX="62.0" layoutY="105.0" styleClass="header" stylesheets="@Design/LoginForm.css" text="Register Account">
+               <font>
+                  <Font name="AdobeArabic-Regular" size="18.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="Administrator_password" layoutX="60.0" layoutY="244.0" onAction="#registerAdministrator" prefHeight="40.0" prefWidth="250.0" promptText="Password" styleClass="textfield" stylesheets="@Design/LoginForm.css" />
+            <Button fx:id="Administrator_signUp" layoutX="62.0" layoutY="382.0" mnemonicParsing="false" onAction="#registerAdministrator" prefHeight="40.0" prefWidth="127.0" styleClass="btn" stylesheets="@Design/LoginForm.css" text="SIGN UP" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <FontAwesomeIcon glyphName="LOCK" layoutX="72.0" layoutY="271.0" size="1.5em" />
+            <Label layoutX="68.0" layoutY="446.0" text="Already Have An Account ? :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="Administrator_signinhere" layoutX="228.0" layoutY="442.0" onAction="#signInForm" text="Sign in Here">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Hyperlink>
+            <ImageView fitHeight="90.0" fitWidth="106.0" layoutX="135.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Picture1-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="69.0" layoutY="144.0" text="Administrator">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="Administrator_confirmPassword" layoutX="60.0" layoutY="316.0" onAction="#registerAdministrator" prefHeight="40.0" prefWidth="250.0" promptText="Confirm Password" styleClass="textfield" stylesheets="@Design/LoginForm.css" />
+            <FontAwesomeIcon glyphName="LOCK" layoutX="72.0" layoutY="343.0" size="1.5em" />
+            <TextField fx:id="Administrator_username" layoutX="60.0" layoutY="175.0" onAction="#registerAdministrator" prefHeight="40.0" prefWidth="250.0" promptText="Username" styleClass="textfield" stylesheets="@Design/LoginForm.css" />
+            <FontAwesomeIcon glyphName="USER" layoutX="70.0" layoutY="201.0" size="1.5em" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="student_form" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" styleClass="bg-form" stylesheets="@Design/LoginForm.css" visible="false">
+         <children>
+            <Label layoutX="56.0" layoutY="108.0" styleClass="header" stylesheets="@Design/LoginForm.css" text="Register Account">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="student_password" layoutX="64.0" layoutY="282.0" onAction="#registerStudent" prefHeight="40.0" prefWidth="250.0" promptText="Password" styleClass="textfield" stylesheets="@Design/MainForm.css" />
+            <Button fx:id="student_signUp" layoutX="62.0" layoutY="398.0" mnemonicParsing="false" onAction="#registerStudent" prefHeight="40.0" prefWidth="127.0" styleClass="btn" text="SIGN UP" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <FontAwesomeIcon glyphName="LOCK" layoutX="73.0" layoutY="308.0" size="1.5em" />
+            <Label layoutX="68.0" layoutY="465.0" text="Already Have An Account ? :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="student_signinhere" layoutX="228.0" layoutY="461.0" onAction="#signInForm" text="Sign in Here">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Hyperlink>
+            <ImageView fitHeight="90.0" fitWidth="106.0" layoutX="135.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Picture1-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="72.0" layoutY="144.0" text="Student">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="student_confirmPassword" layoutX="64.0" layoutY="338.0" onAction="#registerStudent" prefHeight="40.0" prefWidth="250.0" promptText="Confirm Password" styleClass="textfield" stylesheets="@Design/MainForm.css" />
+            <TextField fx:id="student_username" layoutX="64.0" layoutY="170.0" onAction="#registerStudent" prefHeight="40.0" prefWidth="250.0" promptText="Username" styleClass="textfield" stylesheets="@Design/MainForm.css" />
+            <FontAwesomeIcon glyphName="LOCK" layoutX="73.0" layoutY="364.0" size="1.5em" />
+            <FontAwesomeIcon glyphName="USER" layoutX="72.0" layoutY="196.0" size="1.5em" />
+            <TextField fx:id="student_phoneNumber" layoutX="64.0" layoutY="224.0" onAction="#registerStudent" prefHeight="40.0" prefWidth="250.0" promptText="Phone Number" styleClass="textfield" stylesheets="@Design/MainForm.css" />
+            <FontAwesomeIcon glyphName="PHONE" layoutX="72.0" layoutY="250.0" size="1.5em" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,103 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 05 Apr 2024, 11:40:24
+    Author     : Admin
+*/
+
+.white-bg {
+    -fx-background-color: #fff;
+    -fx-background-radius: 8px; /* Add background radius */
+}
+
+.shadow {
+    -fx-effect: dropshadow(three-pass-box, white, 0, 0, 0, 0);
+}
+
+
+.main-bg {
+    -fx-background-color: linear-gradient(to bottom right, #0d9642, #1a722c);
+}
+
+.btn {
+    -fx-background-color: transparent;
+    -fx-border-color: linear-gradient(to bottom right, #38bfff, #38bfff);
+    -fx-border-width: .8px;
+    -fx-text-fill: #000;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-background-radius: 5px; /* Add background and border radius */
+    -fx-border-radius: 5px; /* Add border radius */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5); /* Add shadow effect */
+}
+
+.btn:hover {
+    -fx-background-color: #fff;
+    -fx-text-fill: #000;
+}
+
+.nav-btn {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-border-color: #fff;
+    -fx-border-width: 8px;
+    -fx-text-fill: #fff;
+}
+.nav-btn:hover {
+    -fx-background-color: #0abfa4;
+    -fx-border-color: #0abfa4;
+}
+.bg-form2 {
+    -fx-background-color: linear-gradient(to bottom right, #38bfff, #38bfff);
+    -fx-background-radius: 10px; /* Adjust the value as needed */
+    -fx-background-insets: 0, 5; /* Adjust the value to control the shadow intensity */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 255, 0.3), 10, 0, 0, 5); /* Adjust the values as needed */
+}
+.bg-form6 {
+    -fx-background-color: linear-gradient(to bottom right, #f8f8f8, #f8f8f8);
+    -fx-background-radius: 0 1px 1px 0px; /* Adjust the value as needed */
+    -fx-background-insets: 0, 5; /* Adjust the value to control the shadow intensity */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 0, 0, 0, 5); /* Adjust the values as needed */
+}
+
+.bg-form2:hover {
+    -fx-background-color: transparent;
+}
+
+.bg-form1 {
+    -fx-background-color: linear-gradient(to bottom right, #f8f8f8, #f8f8f8);
+    -fx-background-radius: 10px; /* Adjust the value as needed */
+    -fx-background-insets: 0, 5; /* Adjust the value to control the shadow intensity */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 255, 0.3), 10, 0, 0, 5); /* Adjust the values as needed */
+}
+.header {
+    -fx-border-color: linear-gradient(to bottom right, #000, #000); /* Red color gradient */
+    -fx-border-width: 0 0 0 3px;
+    -fx-padding: 0 0 0 5px;
+    -fx-font-size: 20px;
+}
+.table-view {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-border-color: linear-gradient(to bottom right, #cccccc, #999999);
+    -fx-border-radius: 8px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(to bottom right, #cccccc, #999999);
+    -fx-background-radius: 8px 8px 0 0;
+    -fx-background-insets: 0 0 0 0;
+}
+
+.table-view .column-header,
+.filter {
+    -fx-background-color: transparent;
+    -fx-text-fill: #fff;
+    -fx-size: 40px;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #fff;
+}
